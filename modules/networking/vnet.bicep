@@ -1,13 +1,24 @@
+@description('Virtual network name')
 param vnetName string
+
+@description('Azure region')
 param location string
 
+@description('VNet address prefixes')
 param addressPrefixes array
+
+@description('Subnet configuration')
 param subnets array
+
+@description('Resource tags')
 param tags object
 
-resource vnet 'Microsoft.Network/virtualNetworks@2025-05-01' = {
+
+resource virtualNetwork 'Microsoft.Network/virtualNetworks@2025-05-01' = {
   name: vnetName
+
   location: location
+
   tags: tags
 
   properties: {
@@ -27,4 +38,7 @@ resource vnet 'Microsoft.Network/virtualNetworks@2025-05-01' = {
   }
 }
 
-output vnetId string = vnet.id
+
+output vnetId string = virtualNetwork.id
+
+output vnetName string = virtualNetwork.name
