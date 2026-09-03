@@ -29,16 +29,16 @@ param landingZones = {
 
       tags: {
         Environment: environment
-        Application: 'SQL-AlwaysOn-AG'
+        Project: 'SQL-AG'
         ManagedBy: 'Bicep'
-        Team: 'CloudOps'
+        Owner: 'Infrastructure'
       }
     }
   ]
 
 
   //=================================================
-  // VNETS
+  // VIRTUAL NETWORKS
   //=================================================
 
   vnets: [
@@ -56,9 +56,9 @@ param landingZones = {
 
       tags: {
         Environment: environment
-        Application: 'SQL-AlwaysOn-AG'
+        Project: 'SQL-AG'
         ManagedBy: 'Bicep'
-        Team: 'CloudOps'
+        Owner: 'Infrastructure'
       }
 
       subnets: [
