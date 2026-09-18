@@ -74,6 +74,11 @@ param landingZones = {
 
           addressPrefix: '10.10.2.0/24'
         }
+        {
+          name: 'appgw-subnet'
+
+          addressPrefix: '10.10.3.0/24'
+        }
       ]
     }
   ]
