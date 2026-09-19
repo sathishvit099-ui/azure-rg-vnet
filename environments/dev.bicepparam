@@ -23,7 +23,7 @@ param landingZones = {
   resourceGroups: [
 
     {
-      rgName: 'rg-sql-ag-dev'
+      rgName: 'rg-sql-ag-dev1'
 
       location: location
 
@@ -44,14 +44,14 @@ param landingZones = {
   vnets: [
 
     {
-      vnetName: 'vnet-sql-ag-dev'
+      vnetName: 'vnet-sql-ag-dev1'
 
       location: location
 
-      resourceGroupName: 'rg-sql-ag-dev'
+      resourceGroupName: 'rg-sql-ag-dev1'
 
       addressPrefixes: [
-        '10.10.0.0/16'
+        '20.20.0.0/16'
       ]
 
       tags: {
@@ -64,20 +64,20 @@ param landingZones = {
       subnets: [
 
         {
-          name: 'sql-subnet'
+          name: 'sql-subnet1'
 
-          addressPrefix: '10.10.1.0/24'
+          addressPrefix: '20.20.1.0/24'
         }
 
         {
-          name: 'application-subnet'
+          name: 'application-subnet1'
 
-          addressPrefix: '10.10.2.0/24'
+          addressPrefix: '20.20.2.0/24'
         }
         {
-          name: 'appgw-subnet'
+          name: 'appgw-subnet1'
 
-          addressPrefix: '10.10.3.0/24'
+          addressPrefix: '20.20.3.0/24'
         }
       ]
     }
